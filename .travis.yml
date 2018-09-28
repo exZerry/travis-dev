@@ -1,15 +1,17 @@
+sudo: false
+
 language: php
 
-php:
-  - 7.2
+branches:
+  only:
+    - master
 
-script: phpunit
+install:
+  - php prepare.php
 
-matrix:
-  allow_failures:
-    - php: 7.2
-  fast_finish: true
+script:
+  - php test.php
 
-notifications:
-    on_success: never
-    on_failure: always
+after_script:
+  - php report.php
+  - php cleanup.php
