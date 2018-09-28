@@ -14,7 +14,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase {
         $calcMock->expects($this->never())
             ->method('getNumberFromUserInput')
             ->will($this->returnValue(10));
-        $this->assertEquals(NAN, $calcMock->divideBy(0));
+        $this->assertEquals(2, $calcMock->divideBy(0));
     }
     public function testDivideByNegativeNumber() {
         $calcMock=$this->getMock('\Calculator',array('getNumberFromUserInput'));
