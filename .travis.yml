@@ -6,12 +6,5 @@ branches:
   only:
     - master
 
-install:
-  - php prepare.php
-
 script:
-  - php test.php
-
-after_script:
-  - php report.php
-  - php cleanup.php
+  - phpunit src/.
