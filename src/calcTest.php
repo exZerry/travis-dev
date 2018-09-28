@@ -1,6 +1,6 @@
 <?php
 // CalculatorTest.php
-include_once("Calculator.php");
+include_once("calc.php");
 class CalculatorTest extends \PHPUnit_Framework_TestCase {
     public function testDivideByPositiveNumber() {
         $calcMock=$this->getMock('\Calculator',array('getNumberFromUserInput'));
